@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Animal - AdoPet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1><a href="index.html">AdoPet</a></h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="cadastro.html">Cadastro</a>
+    </nav>
+</header>
+
+<main class="detalhes-container">
+    <h2 id="animal-name"></h2>
+    <div class="img-wrapper">
+        <img id="animal-img" src="" alt="">
+    </div>
+    <p><strong>Idade:</strong> <span id="animal-age"></span></p>
+    <p><strong>Raça:</strong> <span id="animal-breed"></span></p>
+    <p id="animal-desc"></p>
+    <button id="adopt-button">Quero Adotar</button>
+
+    <div id="adoption-form" class="hidden">
+        <h2>🎉 Parabéns! Você escolheu <span id="adopted-animal"></span>!</h2>
+        <p>Preencha o formulário para prosseguir com a adoção:</p>
+        <form id="formAdoption">
+            <fieldset>
+                <legend>Residência</legend>
+                <label for="residencia">Tipo de residência</label>
+                <select id="residencia" required>
+                    <option value="">Selecione</option>
+                    <option value="casa">Casa</option>
+                    <option value="apartamento">Apartamento</option>
+                </select>
+                <label for="espaco">Espaço disponível</label>
+                <input type="text" id="espaco" placeholder="Ex: quintal grande, sala ampla" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Outros animais</legend>
+                <label for="tem-outros-animais">Possui outros animais?</label>
+                <select id="tem-outros-animais" required>
+                    <option value="">Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="não">Não</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentários adicionais</legend>
+                <label for="comentarios">Observações</label>
+                <textarea id="comentarios" placeholder="Digite aqui..." rows="4"></textarea>
+            </fieldset>
+
+            <button type="submit">Enviar Formulário</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    © 2025 AdoPet - Projeto acadêmico de ADS
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>

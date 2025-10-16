@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdoPet - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1><a href="index.html">AdoPet</a></h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="cadastro.html">Cadastro</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h2>Encontre seu novo amigo!</h2>
+    <p>Animais esperando por um lar amoroso.</p>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <img src="assets/dog1.jpg" alt="Rex">
+        <h3>Rex</h3>
+        <p>Idade: 2 anos</p>
+        <p>Raça: Labrador</p>
+        <button class="adopt-btn">Adotar</button>
+    </div>
+    <div class="card">
+        <img src="assets/cat1.jpg" alt="Mia">
+        <h3>Mia</h3>
+        <p>Idade: 1 ano</p>
+        <p>Raça: Sem raça definida</p>
+        <button class="adopt-btn">Adotar</button>
+    </div>
+    <div class="card">
+        <img src="assets/dog2.jpg" alt="Toby">
+        <h3>Toby</h3>
+        <p>Idade: 3 anos</p>
+        <p>Raça: Sem raça definida</p>
+        <button class="adopt-btn">Adotar</button>
+    </div>
+    <div class="card">
+        <img src="assets/cat2.jpg" alt="Luna">
+        <h3>Luna</h3>
+        <p>Idade: 2 anos</p>
+        <p>Raça: Sem raça definida</p>
+        <button class="adopt-btn">Adotar</button>
+    </div>
+    <div class="card">
+        <img src="assets/dog3.jpg" alt="Max">
+        <h3>Max</h3>
+        <p>Idade: 4 anos</p>
+        <p>Raça: Husky Siberiano</p>
+        <button class="adopt-btn">Adotar</button>
+    </div>
+    <div class="card">
+        <img src="assets/cat3.jpg" alt="Bella">
+        <h3>Bella</h3>
+        <p>Idade: 2 anos</p>
+        <p>Raça: Sem raça definida</p>
+        <button class="adopt-btn">Adotar</button>
+    </div>
+</section>
+
+<!-- FORMULÁRIO DE ADOÇÃO -->
+<section id="adoption-form" class="hidden">
+    <h2>🎉 Parabéns! Você escolheu <span id="adopted-animal"></span>!</h2>
+    <p>Preencha o formulário abaixo para prosseguir com a adoção:</p>
+    <form id="formAdoption">
+        <label for="residencia">Tipo de residência:</label>
+        <select id="residencia" required>
+            <option value="">Selecione</option>
+            <option value="casa">Casa</option>
+            <option value="apartamento">Apartamento</option>
+        </select>
+
+        <label for="espaco">Espaço disponível:</label>
+        <input type="text" id="espaco" placeholder="Ex: quintal grande, sala ampla" required>
+
+        <label for="tem-outros-animais">Possui outros animais?</label>
+        <select id="tem-outros-animais" required>
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="não">Não</option>
+        </select>
+
+        <label for="comentarios">Observações adicionais:</label>
+        <textarea id="comentarios" placeholder="Digite aqui..." rows="4"></textarea>
+
+        <button type="submit">Enviar Formulário</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 AdoPet - Projeto acadêmico de ADS
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>

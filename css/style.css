@@ -1,0 +1,290 @@
+<link rel="stylesheet" href="css/style.css">
+<main class="form-container">
+/* =========================
+   RESET E ESTILO BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #ff914d;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background-color: #ff914d;
+  color: #fff;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 a {
+  color: #fff;
+}
+
+header nav a {
+  margin-left: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* =========================
+   BANNER
+========================= */
+.banner {
+  background-color: #ffe6d5;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* =========================
+   CARDS DE ANIMAIS
+========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px 50px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card button {
+  background-color: #ff914d;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+  background-color: #ff7a20;
+  transform: scale(1.05);
+}
+
+/* =========================
+   FORMULÁRIO DE ADOÇÃO
+========================= */
+#adoption-form {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#adoption-form.hidden {
+  display: none;
+}
+
+#adoption-form h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ff914d;
+}
+
+#adoption-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+#adoption-form input,
+#adoption-form select,
+#adoption-form textarea,
+#adoption-form button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#adoption-form button {
+  background-color: #ff914d;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#adoption-form button:hover {
+  background-color: #ff7a20;
+  transform: scale(1.03);
+}
+
+/* =========================
+   LOGIN E CADASTRO
+========================= */
+.login-container,
+.signup-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-container h2,
+.signup-container h2 {
+  margin-bottom: 20px;
+  color: #ff914d;
+}
+
+.login-container input,
+.signup-container input {
+  width: 90%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-container button,
+.signup-container button {
+  width: 95%;
+  background-color: #ff914d;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.login-container button:hover,
+.signup-container button:hover {
+  background-color: #ff7a20;
+  transform: scale(1.05);
+}
+
+.login-container p,
+.signup-container p {
+  margin-top: 15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 25px 20px;
+  color: #555;
+  background-color: #f5f5f5;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    padding: 20px;
+  }
+
+  header {
+    padding: 15px 20px;
+  }
+
+  .banner {
+    padding: 40px 15px;
+  }
+
+  .banner h2 {
+    font-size: 2rem;
+  }
+
+  .login-container,
+  .signup-container,
+  #adoption-form {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+}
+
+
+
+
